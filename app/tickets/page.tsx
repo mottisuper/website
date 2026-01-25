@@ -14,8 +14,15 @@ const personCards: PersonCard[] = [
   {
     name: "Alex Johnson",
     position: "Senior Data Engineer",
-    missions: ["Data Pipeline Optimization", "ETL Process Design", "Cloud Infrastructure"],
-    talks: ["Data Engineering Best Practices", "Scalable Architecture Patterns"],
+    missions: [
+      "Data Pipeline Optimization",
+      "ETL Process Design",
+      "Cloud Infrastructure",
+    ],
+    talks: [
+      "Data Engineering Best Practices",
+      "Scalable Architecture Patterns",
+    ],
     emoji: "🚀",
   },
   {
@@ -42,7 +49,11 @@ const personCards: PersonCard[] = [
   {
     name: "David Kim",
     position: "DevOps Engineer",
-    missions: ["CI/CD Pipeline", "Infrastructure as Code", "Monitoring Systems"],
+    missions: [
+      "CI/CD Pipeline",
+      "Infrastructure as Code",
+      "Monitoring Systems",
+    ],
     talks: ["Kubernetes Deep Dive", "Cloud Security"],
     emoji: "⚙️",
   },
@@ -56,7 +67,11 @@ const personCards: PersonCard[] = [
   {
     name: "James Wilson",
     position: "Backend Architect",
-    missions: ["System Architecture", "Microservices Design", "Performance Optimization"],
+    missions: [
+      "System Architecture",
+      "Microservices Design",
+      "Performance Optimization",
+    ],
     talks: ["Distributed Systems", "Database Scaling"],
     emoji: "🏗️",
   },
@@ -95,7 +110,7 @@ export default function TicketsPage() {
         <h1 className="text-4xl font-light text-zinc-50 mb-12 text-center">
           Ticket Intake
         </h1>
-        
+
         <div className="relative overflow-hidden">
           <div
             className={`flex gap-6 ${isPaused ? "animate-scroll-horizontal-paused" : "animate-scroll-horizontal"}`}
@@ -112,9 +127,11 @@ export default function TicketsPage() {
                   {person.name}
                 </h2>
                 <p className="text-lg text-zinc-400 mb-4">{person.position}</p>
-                
+
                 <div className="mb-4">
-                  <h3 className="text-sm font-medium text-zinc-300 mb-2">Missions:</h3>
+                  <h3 className="text-sm font-medium text-zinc-300 mb-2">
+                    Missions:
+                  </h3>
                   <ul className="space-y-1">
                     {person.missions.map((mission, idx) => (
                       <li key={idx} className="text-sm text-zinc-400">
@@ -123,9 +140,11 @@ export default function TicketsPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div>
-                  <h3 className="text-sm font-medium text-zinc-300 mb-2">Talks:</h3>
+                  <h3 className="text-sm font-medium text-zinc-300 mb-2">
+                    Talks:
+                  </h3>
                   <ul className="space-y-1">
                     {person.talks.map((talk, idx) => (
                       <li key={idx} className="text-sm text-zinc-400">
@@ -142,4 +161,3 @@ export default function TicketsPage() {
     </div>
   );
 }
-
