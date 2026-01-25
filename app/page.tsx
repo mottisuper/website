@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-zinc-950 via-black to-zinc-900 font-sans">
@@ -18,50 +20,79 @@ export default function Home() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl text-zinc-400 sm:text-2xl md:text-3xl font-light tracking-wide transition-opacity duration-300 mb-16">
+        <p className="text-xl text-zinc-400 sm:text-2xl md:text-3xl font-light tracking-wide transition-opacity duration-300 mb-8">
           Data Science & Fullstack Developer
         </p>
 
+        {/* Navigation Link */}
+        <div className="mb-16">
+          <Link
+            href="/tickets"
+            className="text-zinc-400 hover:text-zinc-50 transition-colors duration-300 underline underline-offset-4"
+          >
+            View Tickets
+          </Link>
+        </div>
+
         {/* Projects Section */}
         <div className="w-full max-w-4xl mt-16">
-          <h2 className="text-3xl font-light text-zinc-50 mb-8 text-center">Projects</h2>
+          <h2 className="text-3xl font-light text-zinc-50 mb-8 text-center">
+            Projects
+          </h2>
           <div className="space-y-6">
             {[
               {
                 name: "Predictive Analytics Platform",
                 technologies: ["MLFLOW", "Python", "React", "PostgreSQL"],
-                description: "A comprehensive machine learning platform for building and deploying predictive models with automated experiment tracking and model versioning."
+                description:
+                  "A comprehensive machine learning platform for building and deploying predictive models with automated experiment tracking and model versioning.",
               },
               {
                 name: "Real-time Dashboard System",
                 technologies: ["HTML+CSS", "JavaScript", "WebSocket", "D3.js"],
-                description: "Interactive data visualization dashboard with real-time updates and customizable widgets for monitoring business metrics."
+                description:
+                  "Interactive data visualization dashboard with real-time updates and customizable widgets for monitoring business metrics.",
               },
               {
                 name: "NLP Sentiment Analyzer",
                 technologies: ["Python", "TensorFlow", "FastAPI", "Docker"],
-                description: "Natural language processing service that analyzes sentiment and emotion from text data with RESTful API integration."
+                description:
+                  "Natural language processing service that analyzes sentiment and emotion from text data with RESTful API integration.",
               },
               {
                 name: "E-commerce Analytics Suite",
                 technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-                description: "Full-stack application for tracking e-commerce performance with advanced filtering, reporting, and data export capabilities."
+                description:
+                  "Full-stack application for tracking e-commerce performance with advanced filtering, reporting, and data export capabilities.",
               },
               {
                 name: "Computer Vision Pipeline",
                 technologies: ["PyTorch", "OpenCV", "MLFLOW", "Kubernetes"],
-                description: "Scalable image recognition system with automated model training, evaluation, and deployment workflows."
+                description:
+                  "Scalable image recognition system with automated model training, evaluation, and deployment workflows.",
               },
               {
                 name: "Data Pipeline Orchestrator",
-                technologies: ["Python", "Apache Airflow", "PostgreSQL", "Redis"],
-                description: "ETL pipeline management tool for scheduling, monitoring, and managing complex data workflows across multiple systems."
+                technologies: [
+                  "Python",
+                  "Apache Airflow",
+                  "PostgreSQL",
+                  "Redis",
+                ],
+                description:
+                  "ETL pipeline management tool for scheduling, monitoring, and managing complex data workflows across multiple systems.",
               },
               {
                 name: "Responsive Portfolio Website",
-                technologies: ["HTML+CSS", "JavaScript", "Next.js", "Tailwind CSS"],
-                description: "Modern, responsive web application showcasing projects and skills with smooth animations and mobile-first design."
-              }
+                technologies: [
+                  "HTML+CSS",
+                  "JavaScript",
+                  "Next.js",
+                  "Tailwind CSS",
+                ],
+                description:
+                  "Modern, responsive web application showcasing projects and skills with smooth animations and mobile-first design.",
+              },
             ].map((project, index) => (
               <div
                 key={index}
