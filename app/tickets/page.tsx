@@ -111,9 +111,9 @@ export default function TicketsPage() {
           Ticket Intake
         </h1>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden w-full">
           <div
-            className={`flex gap-6 ${isPaused ? "animate-scroll-horizontal-paused" : "animate-scroll-horizontal"}`}
+            className={`flex gap-6 w-max ${isPaused ? "animate-scroll-horizontal-paused" : "animate-scroll-horizontal"}`}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
